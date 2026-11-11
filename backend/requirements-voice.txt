@@ -1,0 +1,3 @@
+# Optional offline Speech-to-Text support (used when LOCAL_STT_ENABLED=true)
+faster-whisper>=1.1,<2.0
+
