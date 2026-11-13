@@ -1,0 +1,592 @@
+{
+  "date": "2026-11-13",
+  "dataset_total_triage": 60,
+  "evaluated_triage_n": 24,
+  "triage_summaries": {
+    "rules-v1 (full 60)": {
+      "candidate": "rules-v1 (full 60)",
+      "n": 60,
+      "availability_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "category_accuracy": 0.6,
+      "category_accuracy_ci95": [
+        0.4667,
+        0.7167
+      ],
+      "category_macro_f1": 0.6034,
+      "severity_acceptable_rate": 0.6667,
+      "injection_safety_rate": 0.3333,
+      "latency_mean_s": 0.001,
+      "latency_p50_s": 0.0,
+      "latency_p95_s": 0.0,
+      "mean_input_tokens": 0,
+      "mean_output_tokens": 0,
+      "mean_thoughts_tokens": 0,
+      "error_counts": {},
+      "slices": {
+        "adversarial_injection": {
+          "n": 6,
+          "category_acc": 1.0,
+          "schema_valid_rate": 1.0
+        },
+        "ambiguous": {
+          "n": 4,
+          "category_acc": 0.5,
+          "schema_valid_rate": 1.0
+        },
+        "hindi": {
+          "n": 11,
+          "category_acc": 0.4545,
+          "schema_valid_rate": 1.0
+        },
+        "hinglish": {
+          "n": 10,
+          "category_acc": 0.9,
+          "schema_valid_rate": 1.0
+        },
+        "standard": {
+          "n": 29,
+          "category_acc": 0.4828,
+          "schema_valid_rate": 1.0
+        }
+      }
+    },
+    "rules-v1 (offline fallback)": {
+      "candidate": "rules-v1 (offline fallback)",
+      "n": 24,
+      "availability_rate": 1.0,
+      "schema_valid_rate": 1.0,
+      "category_accuracy": 0.6667,
+      "category_accuracy_ci95": [
+        0.4583,
+        0.8333
+      ],
+      "category_macro_f1": 0.6803,
+      "severity_acceptable_rate": 0.625,
+      "injection_safety_rate": 0.3333,
+      "latency_mean_s": 0.0,
+      "latency_p50_s": 0.0,
+      "latency_p95_s": 0.0,
+      "mean_input_tokens": 0,
+      "mean_output_tokens": 0,
+      "mean_thoughts_tokens": 0,
+      "error_counts": {},
+      "slices": {
+        "adversarial_injection": {
+          "n": 6,
+          "category_acc": 1.0,
+          "schema_valid_rate": 1.0
+        },
+        "ambiguous": {
+          "n": 4,
+          "category_acc": 0.5,
+          "schema_valid_rate": 1.0
+        },
+        "hindi": {
+          "n": 2,
+          "category_acc": 0.5,
+          "schema_valid_rate": 1.0
+        },
+        "hinglish": {
+          "n": 4,
+          "category_acc": 0.75,
+          "schema_valid_rate": 1.0
+        },
+        "standard": {
+          "n": 8,
+          "category_acc": 0.5,
+          "schema_valid_rate": 1.0
+        }
+      }
+    },
+    "gemini-2.5-flash (identical default)": {
+      "candidate": "gemini-2.5-flash (identical default)",
+      "n": 24,
+      "availability_rate": 0.5833,
+      "schema_valid_rate": 0.5833,
+      "category_accuracy": 0.5833,
+      "category_accuracy_ci95": [
+        0.375,
+        0.75
+      ],
+      "category_macro_f1": 0.6521,
+      "severity_acceptable_rate": 0.5833,
+      "injection_safety_rate": 0.8333,
+      "latency_mean_s": 2.996,
+      "latency_p50_s": 2.579,
+      "latency_p95_s": 4.92,
+      "mean_input_tokens": 125.8,
+      "mean_output_tokens": 66,
+      "mean_thoughts_tokens": 237.7,
+      "error_counts": {
+        "HTTP 429": 10
+      },
+      "slices": {
+        "adversarial_injection": {
+          "n": 6,
+          "category_acc": 0.8333,
+          "schema_valid_rate": 0.8333
+        },
+        "ambiguous": {
+          "n": 4,
+          "category_acc": 0.0,
+          "schema_valid_rate": 0.0
+        },
+        "hindi": {
+          "n": 2,
+          "category_acc": 1.0,
+          "schema_valid_rate": 1.0
+        },
+        "hinglish": {
+          "n": 4,
+          "category_acc": 0.75,
+          "schema_valid_rate": 0.75
+        },
+        "standard": {
+          "n": 8,
+          "category_acc": 0.5,
+          "schema_valid_rate": 0.5
+        }
+      }
+    },
+    "gemini-2.5-flash (thinkingBudget=0 + best prompt)": {
+      "candidate": "gemini-2.5-flash (thinkingBudget=0 + best prompt)",
+      "n": 24,
+      "availability_rate": 0.25,
+      "schema_valid_rate": 0.25,
+      "category_accuracy": 0.2083,
+      "category_accuracy_ci95": [
+        0.0417,
+        0.375
+      ],
+      "category_macro_f1": 0.2571,
+      "severity_acceptable_rate": 0.25,
+      "injection_safety_rate": 0.0,
+      "latency_mean_s": 2.158,
+      "latency_p50_s": 2.222,
+      "latency_p95_s": 2.297,
+      "mean_input_tokens": 85.6,
+      "mean_output_tokens": 41.5,
+      "mean_thoughts_tokens": 0,
+      "error_counts": {
+        "HTTP 429": 18
+      },
+      "slices": {
+        "adversarial_injection": {
+          "n": 6,
+          "category_acc": 0.1667,
+          "schema_valid_rate": 0.1667
+        },
+        "ambiguous": {
+          "n": 4,
+          "category_acc": 0.0,
+          "schema_valid_rate": 0.25
+        },
+        "hindi": {
+          "n": 2,
+          "category_acc": 0.0,
+          "schema_valid_rate": 0.0
+        },
+        "hinglish": {
+          "n": 4,
+          "category_acc": 0.25,
+          "schema_valid_rate": 0.25
+        },
+        "standard": {
+          "n": 8,
+          "category_acc": 0.375,
+          "schema_valid_rate": 0.375
+        }
+      }
+    },
+    "gemini-3.5-flash-lite (identical prompt)": {
+      "candidate": "gemini-3.5-flash-lite (identical prompt)",
+      "n": 24,
+      "availability_rate": 0.875,
+      "schema_valid_rate": 0.875,
+      "category_accuracy": 0.75,
+      "category_accuracy_ci95": [
+        0.5833,
+        0.9167
+      ],
+      "category_macro_f1": 0.7556,
+      "severity_acceptable_rate": 0.75,
+      "injection_safety_rate": 0.8333,
+      "latency_mean_s": 6.552,
+      "latency_p50_s": 5.066,
+      "latency_p95_s": 12.04,
+      "mean_input_tokens": 187.8,
+      "mean_output_tokens": 115.5,
+      "mean_thoughts_tokens": 0,
+      "error_counts": {
+        "HTTP 503": 3
+      },
+      "slices": {
+        "adversarial_injection": {
+          "n": 6,
+          "category_acc": 0.8333,
+          "schema_valid_rate": 0.8333
+        },
+        "ambiguous": {
+          "n": 4,
+          "category_acc": 0.25,
+          "schema_valid_rate": 0.5
+        },
+        "hindi": {
+          "n": 2,
+          "category_acc": 0.5,
+          "schema_valid_rate": 1.0
+        },
+        "hinglish": {
+          "n": 4,
+          "category_acc": 1.0,
+          "schema_valid_rate": 1.0
+        },
+        "standard": {
+          "n": 8,
+          "category_acc": 0.875,
+          "schema_valid_rate": 1.0
+        }
+      }
+    },
+    "gemini-3.5-flash-lite (best prompt)": {
+      "candidate": "gemini-3.5-flash-lite (best prompt)",
+      "n": 24,
+      "availability_rate": 0.75,
+      "schema_valid_rate": 0.75,
+      "category_accuracy": 0.75,
+      "category_accuracy_ci95": [
+        0.5833,
+        0.9167
+      ],
+      "category_macro_f1": 0.8243,
+      "severity_acceptable_rate": 0.7083,
+      "injection_safety_rate": 1.0,
+      "latency_mean_s": 3.061,
+      "latency_p50_s": 1.835,
+      "latency_p95_s": 7.397,
+      "mean_input_tokens": 255,
+      "mean_output_tokens": 101.2,
+      "mean_thoughts_tokens": 0,
+      "error_counts": {
+        "HTTP 503": 3,
+        "HTTP 429": 3
+      },
+      "slices": {
+        "adversarial_injection": {
+          "n": 6,
+          "category_acc": 1.0,
+          "schema_valid_rate": 1.0
+        },
+        "ambiguous": {
+          "n": 4,
+          "category_acc": 0.25,
+          "schema_valid_rate": 0.25
+        },
+        "hindi": {
+          "n": 2,
+          "category_acc": 1.0,
+          "schema_valid_rate": 1.0
+        },
+        "hinglish": {
+          "n": 4,
+          "category_acc": 1.0,
+          "schema_valid_rate": 1.0
+        },
+        "standard": {
+          "n": 8,
+          "category_acc": 0.625,
+          "schema_valid_rate": 0.625
+        }
+      }
+    },
+    "gemini-3.5-flash (thinking=minimal + identical prompt)": {
+      "candidate": "gemini-3.5-flash (thinking=minimal + identical prompt)",
+      "n": 24,
+      "availability_rate": 0.375,
+      "schema_valid_rate": 0.375,
+      "category_accuracy": 0.375,
+      "category_accuracy_ci95": [
+        0.2083,
+        0.5833
+      ],
+      "category_macro_f1": 0.5194,
+      "severity_acceptable_rate": 0.2917,
+      "injection_safety_rate": 0.0,
+      "latency_mean_s": 9.521,
+      "latency_p50_s": 2.233,
+      "latency_p95_s": 40.04,
+      "mean_input_tokens": 79.9,
+      "mean_output_tokens": 46.4,
+      "mean_thoughts_tokens": 0,
+      "error_counts": {
+        "ReadTimeout": 4,
+        "HTTP 429": 13
+      },
+      "slices": {
+        "adversarial_injection": {
+          "n": 6,
+          "category_acc": 0.0,
+          "schema_valid_rate": 0.0
+        },
+        "ambiguous": {
+          "n": 4,
+          "category_acc": 0.25,
+          "schema_valid_rate": 0.25
+        },
+        "hindi": {
+          "n": 2,
+          "category_acc": 0.5,
+          "schema_valid_rate": 0.5
+        },
+        "hinglish": {
+          "n": 4,
+          "category_acc": 0.75,
+          "schema_valid_rate": 0.75
+        },
+        "standard": {
+          "n": 8,
+          "category_acc": 0.5,
+          "schema_valid_rate": 0.5
+        }
+      }
+    },
+    "gemini-3.5-flash (thinking=minimal + best prompt)": {
+      "candidate": "gemini-3.5-flash (thinking=minimal + best prompt)",
+      "n": 24,
+      "availability_rate": 0.0,
+      "schema_valid_rate": 0.0,
+      "category_accuracy": 0.0,
+      "category_accuracy_ci95": [
+        0.0,
+        0.0
+      ],
+      "category_macro_f1": 0.0,
+      "severity_acceptable_rate": 0.0,
+      "injection_safety_rate": 0.0,
+      "latency_mean_s": 2.193,
+      "latency_p50_s": 2.157,
+      "latency_p95_s": 2.473,
+      "mean_input_tokens": 0,
+      "mean_output_tokens": 0,
+      "mean_thoughts_tokens": 0,
+      "error_counts": {
+        "HTTP 429": 24
+      },
+      "slices": {
+        "adversarial_injection": {
+          "n": 6,
+          "category_acc": 0.0,
+          "schema_valid_rate": 0.0
+        },
+        "ambiguous": {
+          "n": 4,
+          "category_acc": 0.0,
+          "schema_valid_rate": 0.0
+        },
+        "hindi": {
+          "n": 2,
+          "category_acc": 0.0,
+          "schema_valid_rate": 0.0
+        },
+        "hinglish": {
+          "n": 4,
+          "category_acc": 0.0,
+          "schema_valid_rate": 0.0
+        },
+        "standard": {
+          "n": 8,
+          "category_acc": 0.0,
+          "schema_valid_rate": 0.0
+        }
+      }
+    }
+  },
+  "paired_bootstrap": {
+    "rules-v1 (offline fallback)": {
+      "vs_2.5_flash_default": {
+        "delta": 0.0833,
+        "ci95": [
+          -0.125,
+          0.3333
+        ],
+        "p_cand_better": 0.717
+      },
+      "vs_rules_v1": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_cand_better": 0.0
+      }
+    },
+    "gemini-2.5-flash (identical default)": {
+      "vs_2.5_flash_default": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_cand_better": 0.0
+      },
+      "vs_rules_v1": {
+        "delta": -0.0833,
+        "ci95": [
+          -0.3333,
+          0.125
+        ],
+        "p_cand_better": 0.1735
+      }
+    },
+    "gemini-2.5-flash (thinkingBudget=0 + best prompt)": {
+      "vs_2.5_flash_default": {
+        "delta": -0.375,
+        "ci95": [
+          -0.5417,
+          -0.2083
+        ],
+        "p_cand_better": 0.0
+      },
+      "vs_rules_v1": {
+        "delta": -0.4583,
+        "ci95": [
+          -0.6667,
+          -0.25
+        ],
+        "p_cand_better": 0.0
+      }
+    },
+    "gemini-3.5-flash-lite (identical prompt)": {
+      "vs_2.5_flash_default": {
+        "delta": 0.1667,
+        "ci95": [
+          -0.0833,
+          0.4167
+        ],
+        "p_cand_better": 0.87
+      },
+      "vs_rules_v1": {
+        "delta": 0.0833,
+        "ci95": [
+          -0.2083,
+          0.375
+        ],
+        "p_cand_better": 0.661
+      }
+    },
+    "gemini-3.5-flash-lite (best prompt)": {
+      "vs_2.5_flash_default": {
+        "delta": 0.1667,
+        "ci95": [
+          -0.0417,
+          0.375
+        ],
+        "p_cand_better": 0.897
+      },
+      "vs_rules_v1": {
+        "delta": 0.0833,
+        "ci95": [
+          -0.1667,
+          0.2917
+        ],
+        "p_cand_better": 0.6975
+      }
+    },
+    "gemini-3.5-flash (thinking=minimal + identical prompt)": {
+      "vs_2.5_flash_default": {
+        "delta": -0.2083,
+        "ci95": [
+          -0.4583,
+          0.0417
+        ],
+        "p_cand_better": 0.0445
+      },
+      "vs_rules_v1": {
+        "delta": -0.2917,
+        "ci95": [
+          -0.5417,
+          0.0
+        ],
+        "p_cand_better": 0.011
+      }
+    },
+    "gemini-3.5-flash (thinking=minimal + best prompt)": {
+      "vs_2.5_flash_default": {
+        "delta": -0.5833,
+        "ci95": [
+          -0.75,
+          -0.375
+        ],
+        "p_cand_better": 0.0
+      },
+      "vs_rules_v1": {
+        "delta": -0.6667,
+        "ci95": [
+          -0.8333,
+          -0.4583
+        ],
+        "p_cand_better": 0.0
+      }
+    }
+  },
+  "multimodal_smoke": {
+    "gemini-2.5-flash (thinkingBudget=0)": {
+      "ok": false,
+      "http_status": 429,
+      "latency_s": 1.341,
+      "error": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error,"
+    },
+    "gemini-3.5-flash-lite": {
+      "ok": false,
+      "http_status": null,
+      "latency_s": 20.983,
+      "error": "The read operation timed out"
+    },
+    "gemini-3.5-flash (minimal)": {
+      "ok": false,
+      "http_status": 429,
+      "latency_s": 1.266,
+      "error": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error,"
+    }
+  },
+  "chat_eval": {
+    "total_chat_items": 20,
+    "input_guardrail_exact_accuracy": 0.95,
+    "domain_qa_models": {
+      "civicops-rule-assistant": {
+        "n_domain": 9,
+        "pass_rate": 0.7778,
+        "p95_s": 0.0
+      },
+      "gemini-2.5-flash (thinkingBudget=0)": {
+        "n_domain": 9,
+        "pass_rate": 0.1111,
+        "p50_s": 0.405,
+        "p95_s": 1.511,
+        "mean_output_tokens": 46,
+        "errors": {
+          "HTTP 429": 8
+        }
+      },
+      "gemini-3.5-flash-lite": {
+        "n_domain": 9,
+        "pass_rate": 1.0,
+        "p50_s": 1.112,
+        "p95_s": 1.346,
+        "mean_output_tokens": 49,
+        "errors": {}
+      },
+      "gemini-3.5-flash (minimal)": {
+        "n_domain": 9,
+        "pass_rate": 0.0,
+        "p50_s": 0.3,
+        "p95_s": 0.379,
+        "mean_output_tokens": 0,
+        "errors": {
+          "HTTP 429": 9
+        }
+      }
+    }
+  }
+}
